@@ -13,7 +13,7 @@ import java.time.DateTimeException;
 import java.time.ZoneId;
 
 @WebFilter(value = "/time")
-public class FilterUTC extends HttpFilter {
+public class TimezoneValidateFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
         String timeZone = req.getParameter("timezone");
